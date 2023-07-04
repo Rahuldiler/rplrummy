@@ -28,7 +28,7 @@
                 </li>
                 <li class="active"><a data-toggle="tab" href="resultHisotry.html"><i
                             class="fa fa-tachometer fa-lg"></i>Result
-                        </a></li>
+                    </a></li>
                 <li>
                     <a data-toggle="tab" href="profile.html">
                         <i class="fa fa-street-view fa-lg"></i>
@@ -130,13 +130,14 @@
                                 </div>
                             </div>
                         </form>
-                        <table class="table table-responsive-md table-hover">
+                        <table id="myTable" class="table table-responsive-md table-hover">
                             <thead>
                                 <tr>
                                     <th scope="col">Time</th>
                                     <th scope="col">Date</th>
                                     <th scope="col">Year</th>
                                     <th scope="col">Number</th>
+                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -145,48 +146,40 @@
                                     <td>04-Nov</td>
                                     <td>2022</td>
                                     <td>53</td>
+                                    <td>
+                                        <button class="btn btn-success" type="button" onclick="makeEditable(this)">Add
+                                            Result</button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>12.35 PM</td>
                                     <td>04-Nov</td>
                                     <td>2022</td>
                                     <td>78</td>
+                                    <td>
+                                        <button class="btn btn-success" type="button" onclick="makeEditable(this)">Add
+                                            Result</button>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>12.50 PM</td>
+                                    <td>12.15 PM</td>
                                     <td>04-Nov</td>
                                     <td>2022</td>
-                                    <td>82</td>
+                                    <td>53</td>
+                                    <td>
+                                        <button class="btn btn-success" type="button" onclick="makeEditable(this)">Add
+                                            Result</button>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>12.55 PM</td>
+                                    <td>12.35 PM</td>
                                     <td>04-Nov</td>
                                     <td>2022</td>
-                                    <td>87</td>
-                                </tr>
-                                <tr>
-                                    <td>01.15 PM</td>
-                                    <td>04-Nov</td>
-                                    <td>2022</td>
-                                    <td>99</td>
-                                </tr>
-                                <tr>
-                                    <td>01.35 PM</td>
-                                    <td>04-Nov</td>
-                                    <td>2022</td>
-                                    <td>66</td>
-                                </tr>
-                                <tr>
-                                    <td>01.55 PM</td>
-                                    <td>04-Nov</td>
-                                    <td>2022</td>
-                                    <td>49</td>
-                                </tr>
-                                <tr>
-                                    <td>02.15 PM</td>
-                                    <td>04-Nov</td>
-                                    <td>2022</td>
-                                    <td>13</td>
+                                    <td>78</td>
+                                    <td>
+                                        <button class="btn btn-success" type="button" onclick="makeEditable(this)">Add
+                                            Result</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -219,6 +212,31 @@
             document.getElementById("closeBtn").style.display = "none"
         } 
     </script>
+    <script>
+        function makeEditable(button)
+        {
+            var row = button.parentNode.parentNode; // Get the parent row of the clicked button
+            var cells = row.getElementsByTagName("td"); // Get all the td elements in the row
+
+            for (var i = 0; i < cells.length - 1; i++)
+            {
+                var cell = cells[i];
+                var value = cell.innerText;
+
+                // Create an input element
+                var input = document.createElement("input");
+                input.type = "text";
+                input.value = value;
+
+                // Replace the content of the cell with the input element
+                cell.innerHTML = "";
+                cell.appendChild(input);
+            }
+        }
+
+
+    </script>
+    
 </body>
 
 </html>
