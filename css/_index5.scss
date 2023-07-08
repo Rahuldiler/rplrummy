@@ -1,5 +1,5 @@
 
-.home4 {
+.home5 {
     marquee {
         color: #000;
         background-color: #fff;
@@ -18,12 +18,12 @@
             padding-top: 1rem;
             font-weight: 700;
             font-family: "Libre Baskerville", serif;
-            color: #fff;
+            color: #f40506;
             text-align: center;
             text-transform: uppercase;
             animation: animate 1.5s linear infinite;
             strong {
-                color: #fff;
+                color: #f40506;
             }
         }
         @keyframes animate {
@@ -59,14 +59,14 @@
         object-fit: cover;
     }
 }
-.index4_wrapper {
+.index5_wrapper {
     padding: 2rem 0rem;
     h4 {
         text-align: center;
         text-transform: uppercase;
         font-size: 24px;
         font-weight: 600;
-        color: #fff;
+        color: #f40506;
         margin-bottom: 2rem;
     }
     .search_form {
@@ -82,7 +82,7 @@
             list-style: none;
             padding-left: 0rem;
             li {
-                border-bottom: 1px solid #fff;
+                border-bottom: 1px solid #f40506;
                 align-items: center;
                 display: flex;
                 padding: 10px 0px;
@@ -93,16 +93,16 @@
                     margin-bottom: 0px;
                     width: 50%;
                     text-align: center;
-                    color: #e3aaaa;
+                    color: #f40506;
                 }
             }
         }
     }
 }
 
-.news_letter4 {
+.news_letter5 {
     margin: 3rem 0rem;
-    background-color: #fff;
+    background-color: #f40506;
     padding: 30px;
     border: 2px solid #e81e2c;
     display: flex;
